@@ -1,7 +1,22 @@
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
+import GroupIcon from '@material-ui/icons/Group';
 import React from 'react'
 import "./Sidebar.css"
 function Sidebar() {
+
+    const sidebarGroup = (ele) => ( 
+ 
+     <div className="sidebar__group__content">
+            <div className="sidebar__group__content__left"><GroupIcon/></div>
+        
+        
+        <div className="sidebar__group__content__right">
+            {ele}
+        </div>
+     </div>
+        )
+    
+    
     return (
         <div className="sidebar">
 
@@ -51,6 +66,11 @@ function Sidebar() {
                          </div>
 
                 </div>
+              
+              {sidebarGroup("Web developer .")}
+              {sidebarGroup("Web developer .")}
+              {sidebarGroup("Web developer .")}
+
             </div>
         </div>
     )

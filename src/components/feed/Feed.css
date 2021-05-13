@@ -1,0 +1,43 @@
+.feed{
+    border-radius: 10px;
+    border:1px solid lightgrey;
+    background-color: #fff;
+    
+}
+.feed__newpost{
+    display: flex;
+    align-items: center;
+    padding:10px 15px 0;
+}
+.feed__newpost > img{
+    height:50px;
+    width: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+}
+.feed__input{
+    border:1px solid lightgrey;
+    width: 100%;
+    height:50px;
+    border-radius: 80px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    color:grey;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.feed__input:hover{
+    background: var(--linkedinBody);
+}
+.feed__buttons{
+    padding:10px 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.feed__sort{
+    
+}
