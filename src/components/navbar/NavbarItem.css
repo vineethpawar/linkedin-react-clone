@@ -1,0 +1,43 @@
+.navbar__item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+  
+   color:#666666;
+   cursor:pointer;
+   border-bottom: 2px solid transparent;
+    width:80px;
+}
+
+.navbar__item > h3{
+font-weight: 400;
+font-size: 13px;
+
+}
+
+.navbar__item__icon{
+    height:25px !important;
+    width:25px !important; 
+   
+}
+
+.navbar__img__icon{
+    height:25px ;
+    width:25px ; 
+    object-fit:cover;
+    object-position: top;
+    border-radius: 50%;
+   
+}
+
+.navbar__item:hover{
+    color:black;
+}
+
+.active_link{
+    color:black;
+    border-bottom: 2px solid black;
+}
+

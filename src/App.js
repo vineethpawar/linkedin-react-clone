@@ -1,11 +1,30 @@
 import React from 'react';
-
-import './App.css';
+import Navbar from "./components/navbar/Navbar"
+import Sidebar from "./components/sidebar/Sidebar"
+import Feed from "./components/feed/Feed"
+import Trending from "./components/trending/Trending"
+import "./App.css"
 
 function App() {
   return (
-    <div className="App">
-      
+    <div className="app">
+      <Navbar/>
+
+      <div className="appBody">
+        <div className="sidebar__flex">
+        <Sidebar />
+        </div>
+
+        <div className="feed__flex">
+        <Feed />
+        </div>
+
+        <div className="trending__flex">
+        <Trending />
+        </div>
+
+      </div>
+
     </div>
   );
 }

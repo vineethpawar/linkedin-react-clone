@@ -1,0 +1,98 @@
+.sidebar__container{
+    border-radius: 10px;
+    background-color: #fff;
+    border:1px solid lightgrey;
+    margin-bottom: 10px;
+}
+.sidebar__background{
+    height:55px;
+    background: red;
+   padding-bottom: 0;
+}
+.sidebar__background > img{
+ height:100%;
+ width:100%;
+ object-fit: cover;
+ object-position: center;
+ border-top-right-radius: 10px;
+ border-top-left-radius: 10px;
+ 
+}
+
+img.sidebar__dp{
+display: flex;
+height:70px;
+width: 70px;
+border-radius: 50%;
+object-fit: cover;
+object-position: top;
+margin-left: auto;
+margin-right: auto;
+transform:translateY(-50%);
+padding: 2px;
+background: #fff;
+margin-bottom: -35px;
+}
+
+.sidebar__user__details{
+    text-align: center;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        padding-left:5px;
+        padding-right: 5px;
+}
+
+.sidebar__user__details > h3{
+    font-size: 16px;
+     margin-bottom: 5px;
+    font-weight: 500;  
+    
+}
+.sidebar__user__details > h3 >a{
+    color:black;
+    text-decoration: none;
+}
+
+.sidebar__user__details > h3 >a:hover{
+    text-decoration: underline;
+}
+
+.sidebar__user__details > h4{
+    font-weight: 400;
+    font-size: 13px;
+    color:grey;
+}
+
+.sidebar__user__stats{
+    border-top: 1px solid lightgrey;
+    color:grey;
+    font-size: 13px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.sidebar__user__stat{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor:pointer;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.sidebar__user__stat:hover{
+    background-color:var(--linkedinBody);
+}
+
+.sidebar__user__count{
+    color:var(--linkedinBlue);
+    font-size:14px;
+    font-weight: 500;
+
+}
+
+.sidebar__group__title{
+    display: flex;
+    justify-content: space-between;
+}
