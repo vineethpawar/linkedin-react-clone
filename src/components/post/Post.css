@@ -1,0 +1,41 @@
+.post{
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid lightgrey;
+    
+    
+}
+.post__profile__pic > img{
+    height:50px;
+    width:50px;
+ border-radius: 50%;
+ object-fit: cover;
+ object-position: top;
+ margin-right: 10px;
+}
+
+.post__profile__info{
+    display: flex;
+    padding:10px 15px;
+}
+
+.post__profile__name{
+    font-weight: 500;
+    font-size: 14px;
+}
+.post__profile__role{
+   font-weight: 400;
+   font-size: 13px;
+   color:grey;
+}
+.post__profile__updated{
+    font-weight: 400;
+   font-size: 13px;
+   color:grey;
+}
+
+.post__image >img{
+    width:100%;
+    height:auto;
+}
+

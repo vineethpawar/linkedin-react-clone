@@ -2,11 +2,15 @@ import PhotoSizeSelectActualIcon from '@material-ui/icons/PhotoSizeSelectActual'
 import YouTubeIcon from '@material-ui/icons/YouTube';
 import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
 import VerticalSplitIcon from '@material-ui/icons/VerticalSplit';
+import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 
-import React from 'react'
+import React,{useState} from 'react'
 import FeedButton from "./FeedButton"
+import Post from "../post/Post"
 import "./Feed.css"
 function Feed() {
+ const [sort,setSort]=useState("Top");
+ const [sortshow,setSortshow]=useState(false);
     return (
         <div className="feedSection">
           <div className="feed">
@@ -24,13 +28,26 @@ function Feed() {
             </div>
          </div>
 
-            <div className="feed__sort">
+            <div className="feed__sort" onClick={()=>setSortshow(ele=>!ele)}>
                 <div className="feed__sort__left"></div>
-                <div className="feed__sort__right"></div>
+                <div className="feed__sort__right">
+                 <h3> Sort&nbsp;by:&nbsp;<span className="feed__sort__type">{sort}</span></h3>
+                 </div>
+
+                  <div className="feed__sort__options" style={{display:sortshow?"block":"none"}}>
+                     <div onClick={()=>setSort("Top")} className="feed__sort__option">Top</div>
+                     <div onClick={()=>setSort("Recent")} className="feed__sort__option">Recent</div>
+                 </div>
             </div>
 
 
+            <div className="postContainer">
+                <div className="newPostsButton"><ArrowUpwardIcon/> New posts</div>
 
+                <Post/>
+
+            </div>
+           
 
 
         </div>

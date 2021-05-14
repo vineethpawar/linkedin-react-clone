@@ -39,5 +39,82 @@
 }
 
 .feed__sort{
+    position: relative;
+    display: flex;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    align-items: center;
+    color:grey;
+   padding: 5px;
+   padding-bottom: 10px;
+    cursor: pointer;
+}
+.feed__sort__left{
+    height:1px;
+    width: 100%;
+    margin-right: 10px;
+    background-color: lightgrey;
+}
+.feed__sort__right{
+    margin-left: auto;
+}
+.feed__sort__right > h3{
+    font-weight: 400;
+    font-size: 13px;
+}
+.feed__sort__type{
+    font-weight: 600;
+    color:rgb(78, 77, 77);
+}
+
+.feed__sort__options{
+    position: absolute;
+    top:100%;
+    right:0;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background: #fff;
+    width:150px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border:1px solid lightgrey;
+    color:rgb(80, 77, 77);
+    font-size: 14px;
+    font-weight: 400;
+    box-shadow: -4px 5px 10px -1px rgba(0,0,0,0.26);
+    -webkit-box-shadow: -4px 5px 10px -1px rgba(0,0,0,0.26);
+    -moz-box-shadow: -4px 5px 10px -1px rgba(0,0,0,0.26);
+}
+
+.feed__sort__option{
+    padding: 5px 5px 5px 10px;
+}
+.feed__sort__option:hover{
+   background: var(--linkedinBody);
+}
+
+.postContainer{
+    position: relative;
+}
+.newPostsButton{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    background-color: var(--linkedinBlue);
+    width:fit-content;
+    padding:5px 15px;
+    padding-right: 20px;
+    border-radius: 25px;
+    font-weight: 600;
+   cursor:pointer;
+    color: #fff;
     
+    box-shadow: 2px 12px 19px -6px rgba(0,0,0,0.56);
+   -webkit-box-shadow: 2px 12px 19px -6px rgba(0,0,0,0.56);
+    -moz-box-shadow: 2px 12px 19px -6px rgba(0,0,0,0.56);
+    top:0;
+    left:50%;
+    transform: translate(-50%,-50%);
+    
+
 }
