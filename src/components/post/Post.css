@@ -2,7 +2,7 @@
     background: #fff;
     border-radius: 10px;
     border: 1px solid lightgrey;
-    
+    margin-bottom: 10px;
     
 }
 .post__profile__pic > img{
@@ -39,3 +39,64 @@
     height:auto;
 }
 
+
+.post__stat{
+    display: flex;
+    padding:5px 15px;
+    align-items: center;
+    
+    
+}
+
+.post__stat__like,.post__stat__love{
+    padding-right: 5px;
+    height:17px;
+    cursor:pointer;
+}
+.post__stat__like{
+    color:var(--linkedinBlue);
+
+}
+.post__stat__love{
+    color:rgb(196, 57, 57);
+}
+
+.post__stat a{
+    color:grey;
+    font-size: 13px;
+    padding-right: 5px;
+    text-decoration: none;
+}
+
+.post__stat a:hover{
+    color:var(--linkedinBlue);
+ text-decoration: underline;
+    font-size: 13px;
+    
+    
+}
+.post__stat__dot{
+ padding-right: 5px;
+ color:grey;
+}
+
+.post__line{
+    display: flex;
+    height:1px;
+ 
+    margin-left: 15px;
+    margin-right: 15px;
+   
+    background-color: lightgrey;
+}
+
+.post__actions{
+    display: flex;
+    padding: 5px 15px;
+}
+
+.post__text{
+    padding: 10px 15px;
+    color:rgb(92, 90, 90);
+    font-size: 15px;
+}
