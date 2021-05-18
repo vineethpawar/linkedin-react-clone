@@ -1,0 +1,103 @@
+.modal__createpost{
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width:100%;
+    max-width:600px;
+    background-color: #fff;
+    border-radius: 10px;
+   
+}
+
+.modal__title{
+    padding: 5px 10px 5px 20px;
+    display: flex;
+    align-items: center;
+    border-bottom:1px solid lightgrey;
+}
+
+.modal__body{
+    padding:10px 20px;
+   
+    height:150px;
+ 
+}
+
+.modal__title > h3{
+    font-weight: 400;
+    width:fit-content;
+    color:rgb(73, 70, 70);
+    
+}
+
+.modal__close{
+    cursor:pointer;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+.modal__title__close{
+    margin-left: auto;
+    
+  padding: 10px;
+  height:40px !important;
+  width:40px !important;
+  color:rgb(73, 70, 70);
+}
+
+.modal__title__close:hover{
+    border-radius: 50%;
+    background-color: var(--linkedinBody);
+  
+}
+
+.modal__body > textarea{
+    height:100%;
+    width:100%;
+    border:none;
+    outline:none;
+    font-size: 16px;
+    font-family:sans-serif;
+    resize:none;
+    
+}
+
+.modal__actions{
+    padding: 10px 20px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.modal__actions__left{
+    display: flex;
+
+}
+
+.modal__btn{
+    cursor:pointer;
+    display: flex;
+    align-items: center;
+
+}
+
+.modal__btn__icon{
+    padding: 10px;
+    height:45px !important;
+    width:45px !important;
+    color:rgb(73, 70, 70);
+}
+
+.modal__btn__icon:hover{
+    border-radius: 50%;
+    background-color: var(--linkedinBody);
+  
+}
+
+.modal__actions__right{
+    background-color: lightgrey;
+    color:grey;
+    padding: 5px 16px;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-left: auto;
+}

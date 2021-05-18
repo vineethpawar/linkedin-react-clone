@@ -20,7 +20,7 @@ function Feed() {
 const [posts,setPosts] = useState([]);
 
  useEffect(()=>{
-    db.collection("posts").onSnapshot(snapshot => (
+    db.collection("posts").orderBy('timestamp','desc').onSnapshot(snapshot => (
         setPosts(snapshot.docs.map(doc => (
             {
                 id: doc.id,
@@ -37,12 +37,13 @@ const [posts,setPosts] = useState([]);
         dpURL:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz_Pquk1S248-28oOYSsxp-Ixg5GKF8PlCuA&usqp=CAU",
         role:"React developer",
         posted:"1 d",
-        imgURL:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4FXjjJps23bFtzPWSXv2Ydp5PVgwi2rjv2w&usqp=CAU",
-        likes:"352",
-        hearts:"322",
-        comments:"124",
+        imgURL:"",
+        likes:1,
+        hearts:3,
+        comments:0,
         isLiked:true,
         timestamp:firebase.firestore.FieldValue.serverTimestamp(),
+        videoURL:"https://www.youtube.com/watch?v=QaYts9sPmcY&t=8796s",
 
     });
     
@@ -82,9 +83,9 @@ const [posts,setPosts] = useState([]);
             <div className="postContainer">
                 <div className="newPostsButton"><ArrowUpwardIcon/> New posts</div>
 
-            {posts.map(({id, data:{ name,text,dpURL,role,posted,imgURL,likes,hearts,comments,isLiked}})=>(
+            {posts.map(({id, data:{ name,text,dpURL,role,posted,imgURL,likes,hearts,comments,isLiked,videoURL}})=>(
                     <Post key={id} dpURL={dpURL} name={name} role={role} posted={posted} text={text} imgURL={imgURL} likes={likes}   
-                     hearts={hearts} comments={comments} isLiked={isLiked} />
+                     hearts={hearts} comments={comments} isLiked={isLiked} videoURL={videoURL}  />
             ))}
 
                 

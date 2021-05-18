@@ -13,7 +13,27 @@ import SendOutlinedIcon from '@material-ui/icons/SendOutlined';
 import React from 'react'
 import FeedButton from '../feed/FeedButton'
 import "./Post.css"
-function Post({dpURL,name,role,posted,text,imgURL,likes,hearts,comments,isLiked}) {
+function Post({dpURL,name,role,posted,text,imgURL,likes,hearts,comments,isLiked,videoURL}) {
+    
+    const urlExtractor = (videoURL) => {
+        var str = videoURL.trim();
+        var first=str.lastIndexOf("/");
+        var res=str.substr(first+1);
+        
+        if(res.includes("=")){
+            first = str.indexOf("=");
+         res=str.substr(first+1);
+        }
+
+        if(res.includes("&")){
+          var last=res.lastIndexOf("&");
+          res=str.substr(first+1,last);
+        }
+
+        return(res);
+        
+    }
+    
     return (
         <div className="post">
            <div className="post__profile__info">
@@ -33,24 +53,34 @@ function Post({dpURL,name,role,posted,text,imgURL,likes,hearts,comments,isLiked}
             <div className="post__text">
                {text}
             </div>
-
+{imgURL?
           <div className="post__image">
               <img src={imgURL} alt="" />
-          </div>
+          </div> : null
+}
 
-          <div className="post__stat">
-            {likes?<ThumbUpAltIcon className="post__stat__like"/>: <ThumbUpAltOutlinedIcon className="post__stat__like"/>}
-             {hearts? <FavoriteIcon  className="post__stat__love"/>: <FavoriteBorderOutlinedIcon  className="post__stat__love"/>}   
-               
-               
-               
-               
+{videoURL?
+          <div className="post__image">
+             <iframe width="560" height="315" src={"https://www.youtube.com/embed/"+urlExtractor(videoURL)} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+          </div> : null
+}
 
-                
-                 <a href="" className="">{likes}</a>
-                 <div className="post__stat__dot">&middot;</div>
-                 <a href="" className="">{comments} commments</a>    
-          </div>
+
+
+<div className="post__stat">
+            {likes?<ThumbUpAltIcon className="post__stat__like"/>:null}
+             {hearts?<FavoriteIcon  className="post__stat__love"/>:null}   
+               
+              {likes+hearts?
+                 <a href="" className="">{likes+hearts}</a>:null
+              }
+
+             
+            {comments?   <div className="post__stat__dot">&middot;</div>:null }
+            {comments?    <a href="" className="">{comments} commments</a>:null }
+              
+    </div>
+
           
           <div className="post__line"></div>
 

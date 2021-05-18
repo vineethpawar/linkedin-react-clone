@@ -3,11 +3,16 @@ import Navbar from "./components/navbar/Navbar"
 import Sidebar from "./components/sidebar/Sidebar"
 import Feed from "./components/feed/Feed"
 import Trending from "./components/trending/Trending"
+import ModalCreatePost from "./components/modals/ModalCreatePost"
 import "./App.css"
 
 function App() {
   return (
+    
     <div className="app">
+      <div className="modal">
+          <ModalCreatePost/>
+      </div>
       <Navbar/>
 
       <div className="appBody">
