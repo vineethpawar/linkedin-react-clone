@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import Navbar from "./components/navbar/Navbar"
 import Sidebar from "./components/sidebar/Sidebar"
 import Feed from "./components/feed/Feed"
@@ -7,11 +7,22 @@ import ModalCreatePost from "./components/modals/ModalCreatePost"
 import "./App.css"
 
 function App() {
+  
+  const [showCreatePostModal,setShowCreatePostModal]=useState(false);
+
+  const modalCreatePostCloseHandler = () =>{
+    setShowCreatePostModal(false);
+  }
+  const modalCreatePostOpenHandler =() => {
+    setShowCreatePostModal(true);
+  }
+
   return (
     
-    <div className="app">
-      <div className="modal">
-          <ModalCreatePost/>
+    <div className="app" style={showCreatePostModal?{height:"100vh",overflow:"hidden"}:null}>
+      <div className="modal" style={showCreatePostModal?null:{display:"none"}}>
+        
+          <ModalCreatePost closeCreatePost={modalCreatePostCloseHandler} />
       </div>
       <Navbar/>
 
@@ -21,7 +32,7 @@ function App() {
         </div>
 
         <div className="feed__flex">
-        <Feed />
+        <Feed openCreatePost={modalCreatePostOpenHandler}/>
         </div>
 
         <div className="trending__flex">

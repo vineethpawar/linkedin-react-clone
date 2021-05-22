@@ -1,40 +1,8 @@
-import CloseIcon from '@material-ui/icons/Close';
-import PhotoSizeSelectActualOutlinedIcon from '@material-ui/icons/PhotoSizeSelectActualOutlined';import YouTubeIcon from '@material-ui/icons/YouTube';
-import React,{useState} from 'react';
-import {db} from "../../firebase";
-import "./ModalCreatePost.css";
-import firebase from 'firebase'
+import React from 'react'
 
-
-function ModalCreatePost({closeCreatePost}) {
-    const today = new Date();
-    const [input,setInput]=useState("");
-    const [videoUrl,setVideoUrl]=useState("");
-    const sendPost = (e) => {
-        e.preventDefault();
-           if(input.trim()){
-            
-            db.collection("posts").add({
-                name:"Vineeth Pawar",
-                text:input,
-                dpURL:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz_Pquk1S248-28oOYSsxp-Ixg5GKF8PlCuA&usqp=CAU",
-                role:"React developer",
-                posted:today.toString(),
-                imgURL:"",
-                likes:[],
-                hearts:[],
-                comments:[],
-
-                timestamp:firebase.firestore.FieldValue.serverTimestamp(),
-                videoURL:videoUrl,
-                response:0,
-            });
-            setInput("");
-            closeCreatePost();
-        }
-    }
+function ModalVideoLink() {
     return (
-    <div className="modal__container">
+        <div className="modal__container">
         <div className="modal__backdrop" onClick={closeCreatePost}></div>
         <div className="modal__createpost" >
             <form >
@@ -60,11 +28,10 @@ function ModalCreatePost({closeCreatePost}) {
                        Post
                    </button>
                </div>
-                
            </form>
         </div>
     </div>
     )
 }
 
-export default ModalCreatePost
+export default ModalVideoLink

@@ -19,7 +19,7 @@ function Sidebar() {
     
     return (
         <div className="sidebar">
-
+           <div className="sidebar__wrapper">
             <div className="sidebar__container">
             <div className="sidebar__background">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPxWKJuUlbrGz9cgKIp7Mi89CYluhaEJgk0Q&usqp=CAU" alt="" />
@@ -57,7 +57,7 @@ function Sidebar() {
               </div>
             </div>
 
-            <div className="sidebar__container">
+            <div className="sidebar__container" >
                 <div className="sidebar__group__title">
                         <div className="sidebar__group__title__left">Groups</div>
 
@@ -73,6 +73,7 @@ function Sidebar() {
 
             </div>
         </div>
+    </div>
     )
 }
 

@@ -1,9 +1,21 @@
+.sidebar{
+  
+   position: relative;
+}
+
+.sidebar__wrapper{
+    position:relative;
+}
 .sidebar__container{
     border-radius: 10px;
     background-color: #fff;
     border:1px solid lightgrey;
     margin-bottom: 10px;
     padding-bottom: 15px;
+    position: sticky;
+   
+   
+   
 }
 .sidebar__background{
     height:55px;

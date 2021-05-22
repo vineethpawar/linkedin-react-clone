@@ -1,7 +1,12 @@
+.feedSection{
+    position:relative;
+}
+
 .feed{
     border-radius: 10px;
     border:1px solid lightgrey;
     background-color: #fff;
+
     
 }
 .feed__newpost{
@@ -48,6 +53,7 @@
    padding: 5px;
    padding-bottom: 10px;
     cursor: pointer;
+    z-index: 10;
 }
 .feed__sort__left{
     height:1px;
@@ -94,26 +100,31 @@
 }
 
 .postContainer{
-    position: relative;
+  position: relative;
+
 }
+
 .newPostsButton{
-    position: absolute;
+    margin-top:-20px;
+    position: sticky;
+    top:50px;
     display: flex;
     align-items: center;
     background-color: var(--linkedinBlue);
     width:fit-content;
     padding:5px 15px;
     padding-right: 20px;
+    padding-bottom: 10px;
     border-radius: 25px;
     font-weight: 600;
     cursor:pointer;
     color: #fff;
-    
+    margin-left: auto;
+    margin-right: auto;
     box-shadow: 2px 12px 19px -6px rgba(0,0,0,0.56);
    -webkit-box-shadow: 2px 12px 19px -6px rgba(0,0,0,0.56);
     -moz-box-shadow: 2px 12px 19px -6px rgba(0,0,0,0.56);
-    top:0;
-    left:50%;
-    transform: translate(-50%,-50%);
+   z-index: 200;
+   transform:translateY(50%);
 }
 
