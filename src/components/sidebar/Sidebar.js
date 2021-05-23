@@ -2,6 +2,8 @@ import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import GroupIcon from '@material-ui/icons/Group';
 import React from 'react'
 import "./Sidebar.css"
+
+
 function Sidebar() {
 
     const sidebarGroup = (ele) => ( 
@@ -19,7 +21,7 @@ function Sidebar() {
     
     return (
         <div className="sidebar">
-           <div className="sidebar__wrapper">
+           <div className="sidebar__wrapper" >
             <div className="sidebar__container">
             <div className="sidebar__background">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPxWKJuUlbrGz9cgKIp7Mi89CYluhaEJgk0Q&usqp=CAU" alt="" />
@@ -46,7 +48,27 @@ function Sidebar() {
 
                     <div className="sidebar__user__stat">
                         <div className="sidebar__user__desc">
-                        Views on your post
+                        Likes on your post
+                        </div>
+
+                        <div className="sidebar__user__count">
+                            156
+                        </div>
+                    </div>
+
+                    <div className="sidebar__user__stat">
+                        <div className="sidebar__user__desc">
+                        Hearts on your post
+                        </div>
+
+                        <div className="sidebar__user__count">
+                            156
+                        </div>
+                    </div>
+
+                    <div className="sidebar__user__stat">
+                        <div className="sidebar__user__desc">
+                        Comments on your post
                         </div>
 
                         <div className="sidebar__user__count">
@@ -67,9 +89,9 @@ function Sidebar() {
 
                 </div>
               
-              {sidebarGroup("Web developer .")}
-              {sidebarGroup("Web developer .")}
-              {sidebarGroup("Web developer .")}
+              {sidebarGroup("Web developer ")}
+              {sidebarGroup("Web developer ")}
+              {sidebarGroup("Web developer ")}
 
             </div>
         </div>

@@ -23,7 +23,7 @@ function ModalCreatePost({closeCreatePost}) {
                 imgURL:"",
                 likes:[],
                 hearts:[],
-                comments:[],
+                comments:[{id:'1',timestamp:'1d',commentdata:"yoyo hoe are you"},{id:'1',timestamp:'1d',commentdata:"yoyo hoe are you"},{id:'1',timestamp:'4d',commentdata:"rgeerger hoe are you"}],
 
                 timestamp:firebase.firestore.FieldValue.serverTimestamp(),
                 videoURL:videoUrl,

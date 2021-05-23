@@ -127,6 +127,7 @@
     display: flex;
     align-items: center;
     padding-right: 10px;
+   
 }
 .post__comment__input > input{
     border-radius: 35px;
@@ -135,10 +136,14 @@
     height:100%;
     font-size: 14px;
     width:100%;
+    justify-content: center;
     padding-left: 15px;
     padding-right: 10px;
+    color:rgb(65, 63, 63);
    
 }
+
+
 .post__send__icon{
     color:var(--linkedinBlue);
     cursor:pointer;
@@ -149,4 +154,52 @@
 }
 .post__send__icon:hover {
     background-color: var(--linkedinBody);
+}
+
+             
+.post__comments__section{
+ padding: 10px 15px;
+ 
+}
+
+.post__comment{
+ display: flex;
+ align-items: top;
+ margin-bottom: 10px;
+}
+
+.post__comment__user__dp > img{
+    display: flex;
+    height:30px;
+    width:30px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    align-items: center;
+     margin-right: 10px;
+}
+
+.post__comment__user__comment{
+background-color:#e3eff3; 
+width: 100%;
+padding: 5px 10px;
+border-radius: 5px;
+font-size: 14px;
+color:rgb(36, 35, 35);
+}
+
+.post__comment__user__title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.post__comment__user__title__left >h3{
+  font-size: 14px;
+  font-weight: 500;
+  color:rgb(54, 52, 52);
+}
+.post__comment__user__title__left >h4{
+  font-size: 13px;
+  font-weight: 400;
+  color:rgb(104, 99, 99);
 }

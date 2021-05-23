@@ -36,12 +36,7 @@ function Feed({openCreatePost}) {
      
    ))) 
 
-
-
-
-
-
-    },[])
+    },[sort])
    
 
 
@@ -225,7 +220,7 @@ else{
             {posts.map(({id, data:{name,text,dpURL,role,posted,imgURL,likes,hearts,comments,videoURL,response,timestamp}})=>(
                 <div>
                     <Post key={id} id={id} dpURL={dpURL} name={name} role={role} posted={posted} text={text} imgURL={imgURL} likes={likes}   
-                     hearts={hearts} comments={comments} videoURL={videoURL} response={response} timestamp={timestamp}
+                     hearts={hearts} comments={comments} videoURL={videoURL} response={response} timestamp={timestamp.toString()}
                      
                    
                      />

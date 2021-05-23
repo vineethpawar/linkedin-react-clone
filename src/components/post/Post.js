@@ -18,12 +18,15 @@ import "./Post.css"
 import { db } from '../../firebase';
 import firebase from 'firebase'
 
-function Post({id,dpURL,name,role,posted,text,imgURL,likes,hearts,comments,videoURL,response}) {
+function Post({id,dpURL,name,role,posted,text,imgURL,likes,hearts,comments,videoURL,response,timestamp}) {
    
    const [commentBox,setCommentBox]=useState(false)
   const [commentInput,setCommentInput] =useState("");
+
+  const [commentsState,setCommentsState]=useState(comments)
    const addCommentHandler =()=>{
        commentBox ? setCommentBox(false) : setCommentBox(true)
+       
    }
    
    
@@ -205,8 +208,8 @@ function Post({id,dpURL,name,role,posted,text,imgURL,likes,hearts,comments,video
               }
 
              
-            {comments?   <div className="post__stat__dot">&middot;</div>:null }
-            {comments?    <a href="" className="">{comments} commments</a>:null }
+            {commentsState.length&&(likesState+heartsState)?   <div className="post__stat__dot">&middot;</div>:null }
+            {commentsState.length?    <a onClick={addCommentHandler} className="">{commentsState.length} commments</a>:null }
               
     </div>
 
@@ -231,6 +234,8 @@ function Post({id,dpURL,name,role,posted,text,imgURL,likes,hearts,comments,video
           </div>
 
           {commentBox &&
+
+           <div className="comment__box__wrapper">
               <div className="post__commentbox">
                   <div className="post__comment__dp">
                       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSP3tO30bCeKrJ0f1-OQfselZXsYkXYl7oeyg&usqp=CAU" alt="" />
@@ -244,7 +249,33 @@ function Post({id,dpURL,name,role,posted,text,imgURL,likes,hearts,comments,video
                          </span>
                        }
                   </div>
+              
               </div>
+                       
+                <div className="post__comments__section">
+                   { commentsState.map(({id,timestamp,commentdata})=>(  
+                       <div className="post__comment">
+                            <div className="post__comment__user__dp">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSP3tO30bCeKrJ0f1-OQfselZXsYkXYl7oeyg&usqp=CAU" alt="" />
+                            </div>
+                            <div className="post__comment__user__comment">
+                                <div className="post__comment__user__title">
+                                    <div className="post__comment__user__title__left">
+                                        <h3>Vineeth pawar</h3>
+                                        <h4>raact developer | part time cool guy</h4>
+                                    </div>
+                                    <div className="post__comment__user__title__right">
+                                        {timestamp}
+                                    </div>
+                                </div>
+                                {commentdata}  
+                            </div>
+                       </div>
+                    ))
+                   }
+                </div>
+
+            </div>
           }
 
         </div>
