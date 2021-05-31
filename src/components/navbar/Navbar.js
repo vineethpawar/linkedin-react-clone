@@ -8,6 +8,10 @@ import NotificationsIcon from '@material-ui/icons/Notifications';
 import React,{useState} from 'react'
 import NavbarItem from "./NavbarItem"
 import "./Navbar.css"
+
+import {Link} from 'react-router-dom';
+
+
 function Navbar() {
     const [activelink,setActivelink]=useState("Jobs");
     const navlinkHandler=(ele)=>(setActivelink(ele))
@@ -25,16 +29,25 @@ function Navbar() {
 
             <div className="navbar__right">
                 
-                <NavbarItem active={activelink} change={navlinkHandler} Icon={HomeIcon} text="Home" />
-                
-                <NavbarItem active={activelink} change={navlinkHandler} Icon={SupervisorAccountIcon} text="My Network" />
-                  
-                <NavbarItem active={activelink} change={navlinkHandler} Icon={BusinessCenterIcon} text="Jobs" />
-                   
+                <Link className="linkElement" to="/">
+                    <NavbarItem active={activelink} change={navlinkHandler} Icon={HomeIcon} text="Home" />
+                </Link>
+
+                <Link  className="linkElement" to="/network">
+                    <NavbarItem active={activelink} change={navlinkHandler} Icon={SupervisorAccountIcon} text="My Network" />
+                </Link>
+                 
+                <Link className="linkElement"  to="/jobs">
+                    <NavbarItem active={activelink} change={navlinkHandler} Icon={BusinessCenterIcon} text="Jobs" />
+                </Link>
+
+
                 <NavbarItem active={activelink} change={navlinkHandler} Icon={InsertCommentIcon} text="Messaging" />
-                   
-                <NavbarItem active={activelink} change={navlinkHandler} Icon={NotificationsIcon} text="Notifications" />
-            
+
+                <Link className="linkElement" to="/notifications">
+                    <NavbarItem active={activelink} change={navlinkHandler} Icon={NotificationsIcon} text="Notifications" />
+                 </Link>
+
                 <NavbarItem active={activelink} change={navlinkHandler} imgURL="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSP3tO30bCeKrJ0f1-OQfselZXsYkXYl7oeyg&usqp=CAU" text="Me &#x25BC;" />
             </div>
          </div>

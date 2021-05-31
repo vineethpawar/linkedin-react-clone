@@ -11,15 +11,15 @@ function HomeScreen() {
         <div className="home">
              
                 
-                <div className="sidebar__grid">
+                <div className="sidebar__flex">
                 <Sidebar />
                 </div>
 
-                <div className="feed__grid">
+                <div className="feed__flex">
                 <Feed/>
                 </div>
 
-                <div className="trending__grid">
+                <div className="trending__flex">
                 <Trending />
                 </div> 
        

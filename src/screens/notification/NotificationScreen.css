@@ -1,0 +1,14 @@
+.notification__screen{
+    display: flex;
+    
+}
+.notification__screen__left{
+flex:0.7;
+}
+.notification__screen__right{
+flex:0.3;
+}
+.notification__screen__left,.notification__screen__right{
+    width:100%;
+    margin: 10px;
+}

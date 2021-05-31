@@ -1,0 +1,205 @@
+.job__default{
+    margin: 10px;
+     width:100%;
+}
+.job__myjobs{
+    display: flex;
+    background-color: #fff;
+    width:100%;
+    padding: 10px 20px;
+    color:grey;
+    border-radius: 10px;
+    border:1px solid lightgrey;
+    justify-content: space-between;
+    margin-bottom: 15px;
+
+}
+.job__myjobs__btn{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.job__myjobs__btn > h3{
+font-weight: 500;
+font-size: 15px;
+
+}
+.bookmarkIcon{
+    margin-right: 7px;
+}
+
+.post__job{
+    color:var(--linkedinBlue);
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    border:1px solid var(--linkedinBlue);
+   border-radius: 45px;
+   cursor: pointer;
+}
+.post__job > h2{
+   font-size: 16px;
+   font-weight: 500;
+}
+
+.write__btn{
+    height:19px !important;
+}
+
+
+
+.job__search{
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #dce6f1;
+    border:1px solid #bcd4ec;
+    color:rgb(85, 82, 82);
+    margin-bottom: 15px;
+}
+
+.job__search > h2{
+font-weight: 400;
+text-align: center;
+font-size: 20px;
+margin-bottom: 10px;
+}
+
+.job__search__strip{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.job__search__left,.job__search__right{
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 6px 15px;
+    flex:1;
+    margin-right: 15px;
+    border-radius: 5px;
+}
+
+.job__search__left > input,.job__search__right > input{
+   font-size: 14px;
+   padding-left: 3px;
+   width:100%;
+   color:rgb(71, 68, 68);
+   border:none;
+   outline:none;
+
+}
+
+.job__search__btn{
+    padding: 8px 19px;
+    border-radius: 45px;
+    color:white;
+    background-color: var(--linkedinBlue);
+    outline:none;
+    border:none;
+    cursor: pointer;
+    font-size: 16px;;
+}
+
+.recommended__jobs{
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 10px 20px;
+    border:1px solid lightgrey;
+}
+
+.recommended__jobs > h3 {
+    font-size: 18px;
+    font-weight: 500;
+    color:rgb(66, 65, 65);
+}
+.recommended__jobs > h4 {
+    font-size: 14px;
+    font-weight: 500;
+    color:rgb(128, 126, 126);
+}
+
+.recommend__jobs__grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(210px,0.33fr));
+    gap:15px;
+    margin-top: 15px;
+}
+
+.rj__grid__item{
+ padding: 20px 15px;   
+ background-color: #fff;
+ border-radius: 10px;
+ border:1px solid lightgrey;
+ color:grey;
+ cursor: pointer;
+ display: flex;
+ flex-direction: column;
+}
+
+.rj__grid__item:hover{
+    box-shadow: -3px 0px 13px -2px rgba(0,0,0,0.53);
+    -webkit-box-shadow: -3px 0px 13px -2px rgba(0,0,0,0.53);
+    -moz-box-shadow: -3px 0px 13px -2px rgba(0,0,0,0.53);
+}
+
+.rj__comp__img{
+    height:50px;
+    width:50px;
+    object-fit: cover;
+    object-position: center;
+}
+.rj__grid__item__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.rj__post__name{
+    color:rgb(48, 45, 45);
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.rj__comp__name{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.rj__bookmark__icon{
+  border-radius: 50%;
+  padding:7px;  
+  height: 40px !important;
+  width: 40px !important;
+  cursor: pointer;
+}
+.rj__bookmark__icon:hover{
+   background-color: rgb(238, 231, 231);
+}
+.rj__grid__item__footer{
+    margin-top: auto;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.rj__grid__item__footer__rest{
+ 
+    display: flex;
+    justify-content: space-between;
+}
+
+.rj__grid__item__footer p{
+    font-size: 13px;
+}
+
+.rj__apply{
+    cursor: pointer;
+    padding: 10px 15px;
+    background-color: var(--linkedinBlue);
+    color:white;
+    outline:none;
+    border:none;
+    border-radius: 40px;
+}

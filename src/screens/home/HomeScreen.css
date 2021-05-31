@@ -1,9 +1,19 @@
 
 .home{
-    display: grid;
-    grid-template-columns: 2fr 5fr 3fr;
-    grid-gap:15px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    display: flex;
+   
+    width:100%;
 }
 
+.sidebar__flex{
+   flex:2;
+   margin: 10px;
+}
+.feed__flex{
+    flex:5;
+    margin: 10px;
+}
+.trending__flex{
+    flex:3;
+    margin: 10px;
+}

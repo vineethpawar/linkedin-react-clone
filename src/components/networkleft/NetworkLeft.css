@@ -1,3 +1,38 @@
 .network__left{
-    background-color: red;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px 0;
+    border:1px solid lightgrey;
+    margin-bottom: 10px;
+ 
+}
+.network__left__title{
+
+   margin-bottom: 15px;
+}
+.network__left__title>h3{
+    padding-left: 15px;
+    padding-right: 15px;
+  font-size: 17px;
+  font-weight: 400;
+  color:rgb(65, 60, 60)
+}
+
+.network__left__list{
+    padding: 6px 15px;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   color:rgb(92, 87, 87);
+}
+.network__left__list:hover{
+  background-color: var(--linkedinBody);
+}
+
+.network__left__icon{
+    margin-right: 10px;
+}
+
+.network__left__val{
+    margin-left: auto;
 }

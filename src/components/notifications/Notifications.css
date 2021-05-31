@@ -1,0 +1,44 @@
+.notifications{
+    background-color: #fff;
+    border:1px solid lightgrey;
+    border-radius: 10px;
+    width: 100%;
+    
+}
+
+.notification__item{
+    padding: 10px 15px;
+    border-top: 1px solid rgb(235, 232, 232);
+    border-bottom: 1px solid rgb(235, 232, 232);
+    display: flex;
+    align-items: center;
+    color:rgb(102, 96, 96);
+}
+
+.ni__dp__img{
+    margin-right: 10px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    object-position: center;
+    object-fit: cover;
+}
+
+.del__icon{
+    padding: 7px;
+    height: 40px !important;
+    width: 40px !important;
+    cursor: pointer;
+    border-radius: 50%;
+    margin-left: auto;
+    
+}
+.del__icon:hover{
+   background-color: rgb(235, 225, 225);
+   color:rgb(177, 50, 50);
+}
+
+.linkElement{
+ 
+    text-decoration: none;
+}

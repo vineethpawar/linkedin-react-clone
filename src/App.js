@@ -5,10 +5,15 @@ import "./App.css"
 
 
 import HomeScreen from './screens/home/HomeScreen';
+import NetworkScreen from './screens/network/NetworkScreen';
+import Jobs from './screens/jobs/Jobs';
+import NotificationScreen from './screens/notification/NotificationScreen';
+
+import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
 
 function App() {
   
-  const [showCreatePostModal,setShowCreatePostModal]=useState(true);
+  const [showCreatePostModal,setShowCreatePostModal]=useState(false);
 
   const modalCreatePostCloseHandler = () =>{
     setShowCreatePostModal(false);
@@ -23,39 +28,34 @@ function App() {
        <div className="modal" style={showCreatePostModal?null:{display:"none"}}>
           <ModalCreatePost closeCreatePost={modalCreatePostCloseHandler} />
        </div>
-      <Navbar/>
-
-      <div className="appBody"> 
-
-      
-           <HomeScreen />
 
 
+         <Router>
 
+            <Navbar/>
 
-                {/*                    Network Screeen                   */}
+            
+            <div className="appBody"> 
 
+       
 
-                  {/* <div className="sidebar__flex">
-                  <Sidebar />
-                  </div>
+            <Switch>
+                <Route path="/" exact component={HomeScreen} />
+                <Route path="/network" exact component={NetworkScreen} />
+                <Route path="/jobs" exact component={Jobs} />
+                <Route path="/notifications" exact component={NotificationScreen} />
+           </Switch>
+           </div>
 
-                  <div className="feed__flex">
-                  <Feed openCreatePost={modalCreatePostOpenHandler}/>
-                  </div>
-
-                  <div className="trending__flex">
-                  <Trending />
-                  </div> */}
-
-                {/*                    Network Screeen                   */}
+           
+         </Router>
+              
 
 
 
 
 
-
-      </div>
+     
 
   </div>
   );
