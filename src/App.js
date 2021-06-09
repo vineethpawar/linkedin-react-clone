@@ -8,8 +8,10 @@ import HomeScreen from './screens/home/HomeScreen';
 import NetworkScreen from './screens/network/NetworkScreen';
 import Jobs from './screens/jobs/Jobs';
 import NotificationScreen from './screens/notification/NotificationScreen';
+import Auth from './screens/auth/Auth';
 
 import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
+
 
 function App() {
   
@@ -29,7 +31,9 @@ function App() {
           <ModalCreatePost closeCreatePost={modalCreatePostCloseHandler} />
        </div>
 
+       <Auth/>
 
+{/*        
          <Router>
 
             <Navbar/>
@@ -37,18 +41,20 @@ function App() {
             
             <div className="appBody"> 
 
-       
+
 
             <Switch>
                 <Route path="/" exact component={HomeScreen} />
                 <Route path="/network" exact component={NetworkScreen} />
                 <Route path="/jobs" exact component={Jobs} />
                 <Route path="/notifications" exact component={NotificationScreen} />
+                <Route path="/signup" exact component={Auth} />
+                
            </Switch>
            </div>
 
            
-         </Router>
+         </Router> */}
               
 
 

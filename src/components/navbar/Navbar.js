@@ -13,7 +13,7 @@ import {Link} from 'react-router-dom';
 
 
 function Navbar() {
-    const [activelink,setActivelink]=useState("Jobs");
+    const [activelink,setActivelink]=useState("Home");
     const navlinkHandler=(ele)=>(setActivelink(ele))
     return (
     <div className="navbar">
